@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smartly — The Future of Smart Living</title>
+
+ <!-- SEO -->
+  <meta name="description" content="Smartly offers AI solutions and applications,smart products for your fitnes and living, flight services, and smart shopping in Nigeria.">
+  <meta name="keywords" content="AI solutions Nigeria, electric vehicles, electric bikes, kitchen tools, exercise and sports equipment, smart children toys, suits, smart wrist-watch, lather shoes, private jet Nigeria, smart shopping Nigeria">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Smartly – Smart toys/school board, Smart money concept and guide, electric cars and bikes, sports and kitchen equipment,Smart Shopping Assist, Smart apps and AI solutions & Flight Services">
+  <meta property="og:description" content="Grow your business and improve your life with our smart products and services(flight services,Software/AI Solutions, and smart shopping).">
+  <meta property="og:type" content="website">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#08080f;--bg2:#0f0f1a;--bg3:#16161f;--bg4:#1e1e2a;--bg5:#262633;
+  --red:#c8102e;--red2:#e8192c;--red3:#ff2d44;--red-glow:rgba(200,16,46,.18);
+  --gold:#f5a623;--cyan:#00d4ff;--green:#00e676;
+  --text:#f0f0f8;--text2:#9898b8;--text3:#55556a;
+  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+  --nav-h:68px;--r:12px;--r2:20px;
+  --tr:.22s ease;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;height:100%;object-fit:cover}
+button{cursor:pointer;font-family:inherit;border:none;background:none}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--red2);border-radius:3px}
+
+/* ── PAGE SYSTEM ── */
+.page{display:none}
+.page.active{display:block}
+
+/* ── UTILITY ── */
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+.sec{padding:90px 0}
+.sec-alt{background:var(--bg2)}
+/* Section headings */
+.ttl{font-size:clamp(34px,5vw,52px);font-weight:900;line-height:1.15;margin-bottom:12px}
+.ttl span{color:var(--red3)}
+.sub{color:var(--text2);font-size:16px;margin-bottom:48px;max-width:540px;line-height:1.7}
+.tag{display:inline-block;padding:3px 14px;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--red-glow);color:var(--red3);border:1px solid rgba(200,16,46,.3);margin-bottom:12px}
+.rule{width:56px;height:4px;background:var(--red2);border-radius:2px;margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:var(--r);font-size:14px;font-weight:600;transition:var(--tr);cursor:pointer}
+.btn-red{background:var(--red2);color:#fff}
+.btn-red:hover{background:var(--red3);transform:translateY(-2px)}
+.btn-out{border:1.5px solid var(--border2);color:var(--text)}
+.btn-out:hover{border-color:var(--red3);color:var(--red3);background:var(--red-glow)}
+.btn-wa{background:#25d366;color:#fff}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-2px)}
+.wa-svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+
+/* ── HEADER ── */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:900;height:var(--nav-h);background:rgba(8,8,15,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:var(--tr)}
+.hdr-in{max-width:1280px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;gap:16px}
+
+/* Logo */
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0;cursor:pointer}
+.logo-box{width:40px;height:40px;background:var(--red2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#fff;flex-shrink:0}
+.logo-txt{font-size:19px;font-weight:800;background:linear-gradient(90deg,#fff 30%,var(--red3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* Search bar */
+.srch{flex:1;max-width:400px;display:flex;align-items:center;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:var(--tr)}
+.srch:focus-within{border-color:var(--red2)}
+.srch input{flex:1;background:none;border:none;outline:none;color:var(--text);font-size:13px;padding:9px 14px;font-family:inherit}
+.srch input::placeholder{color:var(--text3)}
+.srch-btn{padding:9px 12px;color:var(--text2);transition:color var(--tr)}
+.srch-btn:hover{color:var(--red3)}
+
+/* Nav */
+.nav{display:flex;align-items:center;gap:2px;margin-left:auto}
+.nl{display:flex;align-items:center;gap:4px;padding:8px 12px;font-size:13px;font-weight:500;color:var(--text2);border-radius:8px;transition:var(--tr);white-space:nowrap;cursor:pointer}
+.nl:hover,.nl.on{color:var(--text);background:var(--bg3)}
+.caret{width:11px;height:11px;transition:transform var(--tr)}
+
+/* Dropdown */
+.ndrop{position:relative}
+.ndrop:hover .caret{transform:rotate(180deg)}
+.dmenu{position:absolute;top:calc(100% + 8px);left:0;min-width:230px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:6px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:all var(--tr);z-index:200}
+.ndrop:hover .dmenu{opacity:1;visibility:visible;transform:translateY(0)}
+.di{display:flex;align-items:center;gap:10px;padding:9px 12px;font-size:13px;color:var(--text2);border-radius:8px;transition:var(--tr);cursor:pointer}
+.di:hover{background:var(--bg4);color:var(--text)}
+.di-ic{font-size:15px;width:22px;text-align:center}
+
+/* Hamburger */
+.ham{display:none;flex-direction:column;gap:5px;padding:6px;margin-left:auto}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:var(--tr)}
+
+/* ── SLIDESHOW ── */
+.sshow{position:relative;width:100%;height:calc(100vh - var(--nav-h));min-height:480px;max-height:820px;overflow:hidden;margin-top:var(--nav-h);background:var(--bg2)}
+.strack{display:flex;height:100%;transition:transform .65s cubic-bezier(.4,0,.2,1)}
+.slide{min-width:100%;height:100%;position:relative;cursor:pointer;overflow:hidden}
+.slide-bg{width:100%;height:100%;background-size:cover;background-position:center;transition:transform 9s ease}
+.slide:hover .slide-bg{transform:scale(1.03)}
+.slide-ov{position:absolute;inset:0;background:linear-gradient(115deg,rgba(8,8,15,.88) 0%,rgba(8,8,15,.35) 55%,transparent 100%)}
+.slide-cnt{position:absolute;bottom:90px;left:80px;max-width:540px}
+.slide-tag2{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red3);margin-bottom:10px}
+.slide-h{font-size:clamp(32px,5.5vw,62px);font-weight:900;line-height:1.08;color:#fff;margin-bottom:12px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.slide-p{font-size:17px;color:rgba(255,255,255,.72);margin-bottom:28px}
+.sarr{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:50px;height:50px;background:rgba(8,8,15,.65);border:1.5px solid var(--border2);border-radius:50%;color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;transition:var(--tr);backdrop-filter:blur(8px)}
+.sarr:hover{background:var(--red2);border-color:var(--red2)}
+.sarr.prev{left:22px}.sarr.next{right:22px}
+.sdots{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:10}
+.sdot{width:7px;height:7px;border-radius:99px;background:rgba(255,255,255,.3);transition:all .3s;cursor:pointer}
+.sdot.on{width:26px;background:var(--red3)}
+
+/* ── PRODUCT SECTIONS ── */
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px}
+.pcard{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;transition:var(--tr);cursor:pointer;display:block;color:inherit;text-decoration:none}
+.pcard:hover{border-color:var(--red2);transform:translateY(-5px)}
+.pcard:hover .pimg-inner{transform:scale(1.07)}
+.pimg{height:210px;overflow:hidden;background:var(--bg4);position:relative}
+.pimg-inner{width:100%;height:100%;transition:transform .5s ease;display:flex;align-items:center;justify-content:center;font-size:62px}
+.pbadge{position:absolute;top:12px;left:12px;background:var(--red2);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;text-transform:uppercase;letter-spacing:.04em}
+.pinfo{padding:18px 20px}
+.pname{font-size:15px;font-weight:700;margin-bottom:5px}
+.pdesc{font-size:12px;color:var(--text2);margin-bottom:14px;line-height:1.5}
+.pfoot{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.pprice{font-size:19px;font-weight:800;color:var(--red3)}
+.pwa{display:flex;align-items:center;gap:5px;padding:7px 14px;background:#25d366;color:#fff;border-radius:8px;font-size:12px;font-weight:600;transition:var(--tr)}
+.pwa:hover{background:#1ebe5d}
+
+/* ── ABOUT ── */
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-vis{height:460px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);display:flex;align-items:center;justify-content:center;font-size:90px;position:relative;overflow:hidden}
+.about-vis::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 70%,rgba(200,16,46,.12),transparent 60%)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.stat{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:18px}
+.stat-n{font-size:30px;font-weight:900;color:var(--red3)}
+.stat-l{font-size:12px;color:var(--text2);margin-top:3px}
+
+/* ── SERVICES PREVIEW ── */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.svc-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;transition:var(--tr)}
+.svc-card:hover{border-color:var(--red2);transform:translateY(-5px)}
+.svc-img{height:180px;background:var(--bg4);display:flex;align-items:center;justify-content:center;font-size:56px}
+.svc-body{padding:22px}
+.svc-name{font-size:18px;font-weight:700;margin-bottom:8px}
+.svc-desc{font-size:13px;color:var(--text2);margin-bottom:18px;line-height:1.6}
+
+/* ── CONTACT ── */
+.cont-g{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.ci{display:flex;align-items:flex-start;gap:14px;margin-bottom:24px}
+.ci-ic{width:42px;height:42px;background:var(--red-glow);border:1px solid rgba(200,16,46,.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.ci-lbl{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
+.ci-val{font-size:14px;font-weight:500}
+
+/* ── BLOG ── */
+.blog-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
+.bcard{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;transition:var(--tr);cursor:pointer}
+.bcard:hover{border-color:var(--red2);transform:translateY(-4px)}
+.bimg{height:170px;background:var(--bg4);display:flex;align-items:center;justify-content:center;font-size:50px}
+.bbody{padding:18px}
+.bmeta{font-size:11px;color:var(--text3);margin-bottom:7px}
+.btit{font-size:16px;font-weight:700;margin-bottom:7px;line-height:1.4}
+.bex{font-size:12px;color:var(--text2);line-height:1.6}
+
+/* ── FORMS ── */
+.fg{margin-bottom:18px}
+.fl{display:block;font-size:12px;color:var(--text2);margin-bottom:7px;font-weight:500}
+.fi,.fs,.fta{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-size:14px;font-family:inherit;padding:12px 15px;transition:var(--tr);outline:none}
+.fi:focus,.fs:focus,.fta:focus{border-color:var(--red2);background:var(--bg4)}
+.fta{resize:vertical;min-height:110px}
+.fs option{background:var(--bg3)}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* ── SERVICE PAGES ── */
+.spage-hero{min-height:440px;display:flex;align-items:center;background:var(--bg2);border-bottom:1px solid var(--border);padding-top:var(--nav-h);position:relative;overflow:hidden}
+.spage-hero::before{content:'';position:absolute;top:-80px;right:-80px;width:520px;height:520px;background:radial-gradient(circle,rgba(200,16,46,.1),transparent 65%);pointer-events:none}
+.spage-hero-c{position:relative;z-index:1;padding:70px 0}
+.hero-ic{font-size:60px;margin-bottom:18px}
+.hero-ttl{font-size:clamp(34px,5vw,62px);font-weight:900;line-height:1.1;margin-bottom:14px}
+.hero-sub{font-size:17px;color:var(--text2);max-width:540px;line-height:1.7}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-bottom:56px}
+.feat{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:22px}
+.feat-ic{font-size:26px;margin-bottom:10px}
+.feat-n{font-size:14px;font-weight:700;margin-bottom:5px}
+.feat-d{font-size:12px;color:var(--text2);line-height:1.5}
+.fcard{max-width:700px;margin:0 auto;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);padding:44px}
+.fcard-t{font-size:26px;font-weight:800;margin-bottom:6px}
+.fcard-s{color:var(--text2);margin-bottom:30px;font-size:14px}
+
+/* ── FOOTER ── */
+.ftr{background:var(--bg2);border-top:1px solid var(--border);padding:56px 0 0}
+.ftr-in{max-width:1280px;margin:0 auto;padding:0 24px 48px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px}
+.ftr-tag{font-size:13px;color:var(--text2);line-height:1.7;margin:10px 0 18px}
+.ftr-h{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);margin-bottom:14px}
+.ftr-col{display:flex;flex-direction:column;gap:9px}
+.ftr-l{font-size:13px;color:var(--text2);transition:color var(--tr);cursor:pointer}
+.ftr-l:hover{color:var(--red3)}
+.soc{display:flex;gap:9px;margin-top:4px}
+.soc-l{width:36px;height:36px;border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text2);transition:var(--tr);cursor:pointer}
+.soc-l:hover{background:#25d366;border-color:#25d366;color:#fff}
+.ftr-bot{border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:12px;color:var(--text3);max-width:1280px;margin:0 auto}
+
+/* ── SEARCH RESULTS ── */
+.srch-pg{padding-top:calc(var(--nav-h) + 50px);min-height:100vh}
+.no-res{text-align:center;padding:80px 0;color:var(--text2)}
+.no-res-ic{font-size:64px;margin-bottom:16px}
+
+/* ── 404 ── */
+.p404{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:var(--nav-h)}
+.big404{font-size:140px;font-weight:900;color:var(--red2);line-height:1}
+
+/* ── MOBILE ── */
+@media(max-width:1024px){
+  .about-g,.cont-g{grid-template-columns:1fr;gap:36px}
+  .about-vis{height:300px}
+  .ftr-in{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  :root{--nav-h:60px}
+  .nav{display:none;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(8,8,15,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);flex-direction:column;align-items:stretch;padding:12px;gap:2px}
+  .nav.open{display:flex}
+  .ndrop .dmenu{position:static;opacity:1;visibility:visible;transform:none;background:var(--bg4);margin-top:4px;display:none;border:none}
+  .ndrop.open .dmenu{display:block}
+  .ham{display:flex}
+  .srch{max-width:none;flex:1}
+  .slide-cnt{left:24px;bottom:60px;max-width:90%}
+  .slide-h{font-size:28px}
+  .ftr-in{grid-template-columns:1fr}
+  .fcard{padding:24px 18px}
+  .fr{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.fu{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.fu.vis{opacity:1;transform:translateY(0)}
+
+/* Glowing red accent line */
+.accent-line{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--red2),transparent)}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════════════════ -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+
+    <!-- LOGO — replace the logo-box + logo-txt with your logo image -->
+    <div class="logo" onclick="showPage('home');scrollTo(0,0)">
+      <div class="logo-box">S</div>
+      <span class="logo-txt">Smartly</span>
+    </div>
+
+    <form class="srch" onsubmit="doSearch(event)">
+      <input type="text" id="srchInput" placeholder="Search products &amp; services…" autocomplete="off">
+      <button type="submit" class="srch-btn">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+    </form>
+
+    <button class="ham" id="ham" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <div class="nl" onclick="showPage('home');scrollTo(0,0)">Home</div>
+      <div class="nl" onclick="showPage('home');goSec('about')">About Us</div>
+
+      <div class="ndrop" id="ndrop-prod">
+        <div class="nl">Products
+          <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="dmenu">
+          <div class="di" onclick="showPage('home');goSec('smart-kids')"><span class="di-ic">🧒</span>Smart Kids</div>
+          <div class="di" onclick="showPage('home');goSec('smart-sports')"><span class="di-ic">⚡</span>Smart Sports</div>
+          <div class="di" onclick="showPage('home');goSec('smart-kitchen')"><span class="di-ic">🍳</span>Smart Kitchen &amp; Homes</div>
+          <div class="di" onclick="showPage('home');goSec('smart-energy')"><span class="di-ic">🔋</span>Smart Energy &amp; Electric</div>
+          <div class="di" onclick="showPage('home');goSec('smart-fashion')"><span class="di-ic">👗</span>Smart Fashion</div>
+          <div class="di" onclick="showPage('home');goSec('smart-money')"><span class="di-ic">💰</span>Smart Money Concept</div>
+        </div>
+      </div>
+
+      <div class="ndrop" id="ndrop-svc">
+        <div class="nl">Services
+          <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="dmenu">
+          <div class="di" onclick="showPage('flight')"><span class="di-ic">✈️</span>Flight Services</div>
+          <div class="di" onclick="showPage('ai')"><span class="di-ic">🤖</span>Soft/AI Solutions</div>
+          <div class="di" onclick="showPage('shopper')"><span class="di-ic">🛍️</span>Smart Shopper</div>
+        </div>
+      </div>
+
+      <div class="nl" onclick="showPage('home');goSec('contact')">Contact Us</div>
+      <div class="nl" onclick="showPage('home');goSec('blog')">Blog</div>
+    </nav>
+  </div>
+  <div class="accent-line"></div>
+</header>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- SLIDESHOW -->
+  <section class="sshow">
+    <div class="strack" id="strack">
+
+      <!-- SLIDE 1: SMART SPORTS -->
+      <!-- SLIDE IMAGE: quality sports and exercise equipment -->
+      <div class="slide" onclick="showPage('home');goSec('smart-sports')">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1578763363228-6e8428de69b2?w=1400&q=80');background-color:#1a0a18">
+          <!-- <img src="your-sports-image.jpg" class="img-cover" alt="Smart Sports"> -->
+        </div>
+        <div class="slide-ov"></div>
+        <div class="slide-cnt">
+          <div class="slide-tag2">Smart Products</div>
+          <h2 class="slide-h">Portable sports equipment<br>that <span style="color:var(--red3)">helps you</span> stay fit.</h2>
+          <p class="slide-p">Smart equipment that perfectly suits your training and exercice needs.</p>
+          <span class="btn btn-red">Shop Smart Sports →</span>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: SMART KIDS -->
+      <!-- SLIDE IMAGE: Replace background-image URL below with your image, or add <img> inside .slide-bg -->
+      <!-- To use YOUR image instead: remove the background-image above and add:
+               <img src="your-kids-image.jpg" class="img-cover" alt="Smart Kids"> -->
+      <div class="slide" onclick="showPage('home');goSec('smart-kids')">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1609050470903-86a61ed4fae2?w=1400&q=80');background-color:#1a1a2e"></div>
+        <div class="slide-ov"></div>
+        <div class="slide-cnt">
+          <div class="slide-tag2">Smart Products</div>
+          <h2 class="slide-h">Toys and devices for<br>the next generation <span style="color:var(--red3)">thinkers</span></h2>
+          <p class="slide-p">Books, toys and learning devices built for curious minds.</p>
+          <span class="btn btn-red">Explore Smart Kids →</span>
+        </div>
+      </div>
+
+
+      <!-- SLIDE 3: SMART ENERGY -->
+      <!-- SLIDE IMAGE: solar + electric car + electric bike -->
+      <div class="slide" onclick="showPage('home');goSec('smart-energy')">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1731099454645-7c2eeed7797d?w=1400&q=80');background-color:#0a1a0a"></div>
+        <div class="slide-ov"></div>
+        <div class="slide-cnt">
+          <div class="slide-tag2">Smart Products</div>
+          <h2 class="slide-h">Solar, electric cars &amp; bikes —<br><span style="color:var(--red3)">smart energy</span> for your world.</h2>
+          <p class="slide-p">Clean power and smart mobility solutions that perform.</p>
+          <span class="btn btn-red">Shop Smart Energy →</span>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: SMART KITCHEN -->
+      <!-- SLIDE IMAGE: quality smart kitchen and home appliances -->
+      <div class="slide" onclick="showPage('home');goSec('smart-Kitchen & Homes')">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1746596912830-18970b9e2c89?w=1400&q=80');background-color:#1a0a18">
+          <!-- <img src="your-kitchen-image.jpg" class="img-cover" alt="Smart Kitchen & Homes"> -->
+        </div>
+        <div class="slide-ov"></div>
+        <div class="slide-cnt">
+          <div class="slide-tag2">Smart Products</div>
+          <h2 class="slide-h">Cook the smart<br>and <span style="color:var(--red3)">easy</span> way.</h2>
+          <p class="slide-p">with powerful tools that make your kitchen and home smartly connected.</p>
+          <span class="btn btn-red">Shop Smart Kitchen and Homes →</span>
+        </div>
+      </div>
+
+      <!-- SLIDE 5: SMART FASHION -->
+      <!-- SLIDE IMAGE: quality watch, smart suit, leather shoe -->
+      <div class="slide" onclick="showPage('home');goSec('smart-fashion')">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1617137968427-85924c800a22?w=1400&q=80');background-color:#1a0a18">
+          <!-- <img src="your-fashion-image.jpg" class="img-cover" alt="Smart Fashion"> -->
+        </div>
+        <div class="slide-ov"></div>
+        <div class="slide-cnt">
+          <div class="slide-tag2">Smart Products</div>
+          <h2 class="slide-h">Wear the future that makes you<br>the <span style="color:var(--red3)">smartest person</span> in the room.</h2>
+          <p class="slide-p">Smart integrated fashion that singles you out.</p>
+          <span class="btn btn-red">Shop Smart Fashion →</span>
+        </div>
+      </div>
+
+      <!-- SLIDE 6: SMART MONEY CONCEPT -->
+      <!-- SLIDE IMAGE -->
+      <div class="slide" onclick="showPage('home');goSec('smart-money')">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1719381565370-86f9d7a9fc34?w= 1400&q=80');background-color:#1a1208">
+          <!-- <img src="your-money-image.jpg" class="img-cover" alt="Smart Money"> -->
+        </div>
+        <div class="slide-ov"></div>
+        <div class="slide-cnt">
+          <div class="slide-tag2">Smart Products</div>
+          <h2 class="slide-h">Make your money<br>work <span style="color:var(--red3)">smarter</span> for you.</h2>
+          <p class="slide-p">Investment tools, business plans and wealth strategies.</p>
+          <span class="btn btn-red">Grow Your Wealth →</span>
+        </div>
+      </div>
+
+       <!-- SLIDE 7: FLIGHT SERVICES -->
+      <!-- SLIDE IMAGE -->
+      <div class="slide" onclick="showPage('flight')">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1400&q=80');background-color:#0a1628"></div>
+        <div class="slide-ov"></div>
+        <div class="slide-cnt">
+           <div class="slide-tag2">Our Services</div>
+          <h2 class="slide-h">Charter a private jet — <span style="color:var(--red3)">local and international</span> routes.</h2>
+          <p class="slide-p">Premium jet charter — we handle everything for you.</p>
+          <span class="btn btn-red">Book a Jet →</span>
+        </div>
+      </div>
+    
+
+      <!-- SLIDE 8: SMART SHOPPER -->
+      <!-- SLIDE IMAGE -->
+      <div class="slide" onclick="showPage('shopper')">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1717457782008-0be60990f016?w=1400&q=80');background-color:#1a1208"></div>
+        <div class="slide-ov"></div>
+        <div class="slide-cnt">
+          <div class="slide-tag2">Our Services</div>
+          <h2 class="slide-h">Your personal<br><span style="color:var(--red3)">shopping</span> assistant.</h2>
+          <p class="slide-p">We source, compare and deliver the best deals for you.</p>
+          <span class="btn btn-red">Start Shopping →</span>
+        </div>
+      </div>
+
+      
+      <!-- SLIDE 9: AI SOLUTIONS -->
+      <!-- SLIDE IMAGE -->
+      <div class="slide" onclick="showPage('ai')">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1400&q=80');background-color:#1a0a2e"></div>
+        <div class="slide-ov"></div>
+        <div class="slide-cnt">
+          <div class="slide-tag2">Our Services</div>
+          <h2 class="slide-h">Build smarter<br><span style="color:var(--red3)">AI-powered</span> software.</h2>
+          <p class="slide-p">Custom apps, automation and AI solutions for your business.</p>
+          <span class="btn btn-red">Get a Quote →</span>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="sarr prev" onclick="slideMove(-1)">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="sarr next" onclick="slideMove(1)">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="sdots" id="sdots"></div>
+  </section>
+
+  <!-- ── SMART KIDS ── -->
+  <section class="sec" id="smart-kids">
+    <div class="wrap">
+      <div class="rule"></div>
+      <div class="tag">Smart Kids</div>
+      <h2 class="ttl">Learning <span>reimagined</span></h2>
+      <p class="sub">Powerful toys and devices that make every child a future innovator.</p>
+      <div class="prod-grid">
+        <!-- PRODUCT CARD — Smart Learning Tablet -->
+        <!-- HOW TO ADD YOUR IMAGE: Replace the emoji div inside .pimg-inner with:
+             <img src="your-tablet-photo.jpg" class="img-cover" alt="Smart Learning Tablet">
+             OR for an online image:
+             <img src="https://example.com/tablet.jpg" class="img-cover" alt="Smart Learning Tablet"> -->
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Smart Learning Tablet','₦45,000')">
+          <div class="pimg"><div class="pimg-inner"><img src="https://images.unsplash.com/photo-1614350434160-dda40c94bb40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8a2lkcyUyMGxlYXJuaW5nJTIwdG95cyUyMGNhciUyMHdpdGglMjByZW1vdGV8ZW58MHx8MHx8fDA%3D" class="img-cover" alt="Smart Learning Tablet"></div><span class="pbadge">Smart Kids</span></div>
+          <div class="pinfo"><div class="pname">Smart Kids Remote Control Car</div><div class="pdesc">AI-powered Vehicle for ages 3–12 with 500+ educational games.</div><div class="pfoot"><span class="pprice">₦45,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Coding Robot Kit','₦38,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#1a3a2a,#0d2a1a)">🤖</div><span class="pbadge">Smart Kids</span></div>
+          <div class="pinfo"><div class="pname">Coding Robot Kit</div><div class="pdesc">Teach kids coding through play, building and hands-on adventure missions.</div><div class="pfoot"><span class="pprice">₦38,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Smart Story Speaker','₦22,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#2a1a3a,#1a0d2a)">🔊</div><span class="pbadge">Smart Kids</span></div>
+          <div class="pinfo"><div class="pname">Smart Story Speaker</div><div class="pdesc">AI storyteller that adapts to your child's imagination and vocabulary level.</div><div class="pfoot"><span class="pprice">₦22,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SMART SPORTS ── -->
+  <section class="sec sec-alt" id="smart-sports">
+    <div class="wrap">
+      <div class="rule"></div><div class="tag">Smart Sports</div>
+      <h2 class="ttl">Train <span>smarter</span></h2>
+      <p class="sub">Performance-tracking gear for athletes at every level.</p>
+      <div class="prod-grid">
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('AI Fitness Tracker','₦55,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#2a1a0a,#1a0d05)">⌚</div><span class="pbadge">Smart Sports</span></div>
+          <div class="pinfo"><div class="pname">AI Fitness Tracker</div><div class="pdesc">Real-time vitals, calories, sleep quality and athletic performance analytics.</div><div class="pfoot"><span class="pprice">₦55,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Smart Jump Rope','₦18,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#1a2a1a,#0d1a0d)">🏃</div><span class="pbadge">Smart Sports</span></div>
+          <div class="pinfo"><div class="pname">Smart Jump Rope</div><div class="pdesc">Digital counter, calorie tracker and personal coaching app integration.</div><div class="pfoot"><span class="pprice">₦18,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Smart Football','₦32,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#2a2a1a,#1a1a0d)">⚽</div><span class="pbadge">Smart Sports</span></div>
+          <div class="pinfo"><div class="pname">Smart Football</div><div class="pdesc">Sensor-embedded ball that tracks speed, spin and shot power in real time.</div><div class="pfoot"><span class="pprice">₦32,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SMART KITCHEN ── -->
+  <section class="sec" id="smart-kitchen">
+    <div class="wrap">
+      <div class="rule"></div><div class="tag">Smart Kitchen &amp; Homes</div>
+      <h2 class="ttl">Cook with <span>ease</span></h2>
+      <p class="sub">Smart appliances that make your kitchen and home truly connected.</p>
+      <div class="prod-grid">
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('AI Air Fryer Pro','₦98,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#2a1a0a,#1a0d00)">🍳</div><span class="pbadge">Smart Kitchen</span></div>
+          <div class="pinfo"><div class="pname">AI Air Fryer Pro</div><div class="pdesc">12-in-1 smart air fryer with app control, recipe library and auto-cooking modes.</div><div class="pfoot"><span class="pprice">₦98,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Smart Blender','₦42,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#1a2a1a,#0a1a0a)">🧃</div><span class="pbadge">Smart Kitchen</span></div>
+          <div class="pinfo"><div class="pname">Smart Blender</div><div class="pdesc">Self-cleaning blender with built-in recipe suggestions and nutritional tracking.</div><div class="pfoot"><span class="pprice">₦42,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Smart Water Purifier','₦65,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#0a1a2a,#051018)">💧</div><span class="pbadge">Smart Kitchen</span></div>
+          <div class="pinfo"><div class="pname">Smart Water Purifier</div><div class="pdesc">6-stage filtration with real-time quality monitoring display and app alerts.</div><div class="pfoot"><span class="pprice">₦65,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SMART ENERGY ── -->
+  <section class="sec sec-alt" id="smart-energy">
+    <div class="wrap">
+      <div class="rule"></div><div class="tag">Smart Energy &amp; Electric Cars and Bikes</div>
+      <h2 class="ttl">Power your <span>world</span></h2>
+      <p class="sub">Efficient solar, inverter, electric cars and bikes solutions for homes and businesses.</p>
+      <div class="prod-grid">
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Solar Inverter 5KVA','₦320,000')">
+          <div class="pimg"><div class="pimg-inner"><img src="images/electric power bike.jpg" class="img-cover" alt="Smart Electric Power Bike"></div><span class="pbadge">Smart Energy</span></div>
+          <div class="pinfo"><div class="pname">Electric Power Bike</div><div class="pdesc">WiFi monitor, MPPT charger and expandable battery bank.</div><div class="pfoot"><span class="pprice">₦2,320,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Smart Electric Motor','₦180,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#1a1a2a,#0d0d1a)">⚙️</div><span class="pbadge">Smart Energy</span></div>
+          <div class="pinfo"><div class="pname">Smart Electric Motor</div><div class="pdesc">Variable speed drive motor with IoT integration and remote monitoring dashboard.</div><div class="pfoot"><span class="pprice">₦180,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Solar Panel 400W','₦95,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#2a2a0a,#1a1a00)">🌞</div><span class="pbadge">Smart Energy</span></div>
+          <div class="pinfo"><div class="pname">Solar Panel 400W</div><div class="pdesc">High-efficiency monocrystalline panel with 25-year performance warranty.</div><div class="pfoot"><span class="pprice">₦95,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SMART FASHION ── -->
+  <section class="sec" id="smart-fashion">
+    <div class="wrap">
+      <div class="rule"></div><div class="tag">Smart Fashion</div>
+      <h2 class="ttl">Step out <span>stunning and smart</span></h2>
+      <p class="sub">Smart integrated fashion that singles you out.</p>
+      <div class="prod-grid">
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Smart Watch Elite','₦75,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#2a0a1a,#1a0010)">⌚</div><span class="pbadge">Smart Fashion</span></div>
+          <div class="pinfo"><div class="pname">Smart Watch Elite</div><div class="pdesc">Premium AMOLED smartwatch with health sensors, GPS and 7-day battery life.</div><div class="pfoot"><span class="pprice">₦75,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('LED Smart Sneakers','₦48,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#0a1a2a,#051018)">👟</div><span class="pbadge">Smart Fashion</span></div>
+          <div class="pinfo"><div class="pname">LED Smart Sneakers</div><div class="pdesc">App-controlled color-changing LED sneakers that turn every street into your runway.</div><div class="pfoot"><span class="pprice">₦48,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Smart Sunglasses','₦35,000')">
+          <div class="pimg"><div class="pimg-inner" style="background:linear-gradient(135deg,#1a0a2a,#100518)">🕶️</div><span class="pbadge">Smart Fashion</span></div>
+          <div class="pinfo"><div class="pname">Smart Sunglasses</div><div class="pdesc">Built-in speakers, UV400 protection and smart touch controls on the frame.</div><div class="pfoot"><span class="pprice">₦35,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SMART MONEY ── -->
+  <section class="sec sec-alt" id="smart-money">
+    <div class="wrap">
+      <div class="rule"></div><div class="tag">Smart Money Concept</div>
+      <h2 class="ttl">Grow your <span>wealth</span></h2>
+      <p class="sub">Tools, guides and strategies to make your money work harder for you.</p>
+      <div class="prod-grid">
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Investment Starter Kit','₦15,000')">
+          <div class="pimg"><div class="pimg-inner"><img src="images/3.png" class="img-cover" alt="Investment Starter Kit"></div><span class="pbadge">Smart Money</span></div>
+          <div class="pinfo"><div class="pname">Investment Starter Kit</div><div class="pdesc">Complete toolkit and guide for smart investing in real and financial markets.</div><div class="pfoot"><span class="pprice">₦15,000 - ₦150,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Business Plan Bundle','₦25,000')">
+          <div class="pimg"><div class="pimg-inner"><img src="images/1.png" class="img-cover" alt="Lands"></div><span class="pbadge">Smart Money</span></div>
+          <div class="pinfo"><div class="pname">Lands</div><div class="pdesc">Buying or starting off with Land: banking, use, or investment.</div><div class="pfoot"><span class="pprice">₦0,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+        <a class="pcard fu" href="javascript:void(0)" onclick="waProduct('Crypto Tracker Pro','₦12,000')">
+          <div class="pimg"><div class="pimg-inner"><img src="images/2.png" class="img-cover" alt="Dubai property"></div><span class="pbadge">Smart Money</span></div>
+          <div class="pinfo"><div class="pname">Real Estate</div><div class="pdesc">Real-estate in Dubai for smart investors.</div><div class="pfoot"><span class="pprice">$10,000</span><span class="pwa"><svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Order</span></div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="about-g">
+        <div>
+          <div class="rule"></div><div class="tag">About Us</div>
+          <h2 class="ttl">We build the <span>smart future</span></h2>
+          <p style="color:var(--text2);line-height:1.8;margin-bottom:16px">Smartly is Nigeria's premier destination for intelligent products and technology-driven services. From smart devices for your home and family to cutting-edge AI solutions for your business — we bring the future to your doorstep.</p>
+          <p style="color:var(--text2);line-height:1.8">Founded on the belief that technology should empower everyone, we curate only the most innovative, reliable and value-packed products and services.</p>
+          <!-- ABOUT TAGLINE — item 13 -->
+          <div class="about-tag-line">
+            "We show you the <span>smart lifestyle</span> that maximizes your life and resources — because living smart is the ultimate advantage."
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="stat-n">500+</div><div class="stat-l">Products available</div></div>
+            <div class="stat"><div class="stat-n">10k+</div><div class="stat-l">Happy customers</div></div>
+            <div class="stat"><div class="stat-n">6</div><div class="stat-l">Product categories</div></div>
+            <div class="stat"><div class="stat-n">24/7</div><div class="stat-l">WhatsApp support</div></div>
+          </div>
+        </div>
+        <div class="about-vis">
+          <span style="position:relative;z-index:1;font-size:90px">🏪</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES PREVIEW ── -->
+  <section class="sec sec-alt">
+    <div class="wrap">
+      <div class="rule"></div><div class="tag">Our Services</div>
+      <h2 class="ttl">More than just <span>products</span></h2>
+      <p class="sub">Premium services designed to make your life smarter and easier.</p>
+      <div class="svc-grid">
+
+        <div class="svc-card fu">
+          <!-- SERVICE CARD IMAGE: Flight -->
+          <div class="svc-img">
+            <!-- Replace emoji with: <img src="your-jet-image.jpg" class="img-cover"> -->
+            ✈️
+          </div>
+          <div class="svc-body">
+            <div class="svc-name">Flight Services</div>
+            <p class="svc-desc">Seamless private jet charter for local and international routes — handled for you.</p>
+            <button class="btn btn-red" onclick="showPage('flight')">Book a Jet →</button>
+          </div>
+        </div>
+
+         <div class="svc-card fu">
+          <!-- SERVICE CARD IMAGE: AI -->
+          <div class="svc-img">
+            <!-- Replace emoji with: <img src="your-ai-image.jpg" class="img-cover"> -->
+            🤖
+          </div>
+          <div class="svc-body">
+            <div class="svc-name">Soft/AI Solutions</div>
+            <p class="svc-desc">Custom software, mobile apps, AI chatbots and automation systems built for your business.</p>
+            <button class="btn btn-red" onclick="showPage('ai')">Get a Quote →</button>
+          </div>
+        </div>
+
+        <div class="svc-card fu">
+          <!-- SERVICE CARD IMAGE: Shopper -->
+          <div class="svc-img">
+            <!-- Replace emoji with: <img src="your-shopper-image.jpg" class="img-cover"> -->
+            🛍️
+          </div>
+          <div class="svc-body">
+            <div class="svc-name">Smart Shopper</div>
+            <p class="svc-desc">Tell us what you need — our personal shoppers source, compare and deliver the best deals to you.</p>
+            <button class="btn btn-red" onclick="showPage('shopper')">Start Shopping →</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+        <!--<div class="svc-card fu">
+          <div class="svc-img" style="background:linear-gradient(135deg,#1a0a2e,#100520)">🤖</div>
+          <div class="svc-body">
+            <div class="svc-name">Soft/AI Solutions</div>
+            <p class="svc-desc">Custom software, mobile apps, AI chatbots and automation systems built for your business.</p>
+            <button class="btn btn-red" onclick="showPage('ai')">Get a Quote →</button>
+          </div>
+        </div>
+
+        <div class="svc-card fu">
+          <div class="svc-img" style="background:linear-gradient(135deg,#1a1208,#120e05)">🛍️</div>
+          <div class="svc-body">
+            <div class="svc-name">Smart Shopper</div>
+            <p class="svc-desc">Tell us what you need — our personal shoppers source, compare and deliver the best deals to you.</p>
+            <button class="btn btn-red" onclick="showPage('shopper')">Start Shopping →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ── CONTACT ── -->
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="cont-g">
+        <div>
+          <div class="rule"></div><div class="tag">Contact Us</div>
+          <h2 class="ttl">Let's <span>talk</span></h2>
+          <p style="color:var(--text2);margin-bottom:36px;line-height:1.8">Questions? We reply in minutes via WhatsApp. Reach out any time.</p>
+          <div class="ci"><div class="ci-ic">📍</div><div><div class="ci-lbl">Address</div><div class="ci-val">Abuja, and Lagos, Nigeria</div></div></div>
+          <div class="ci"><div class="ci-ic">📱</div><div><div class="ci-lbl">WhatsApp</div><div class="ci-val">+234 903 487 3552</div></div></div>
+          <div class="ci"><div class="ci-ic">✉️</div><div><div class="ci-lbl">Email</div><div class="ci-val">info@smartlyltd.com</div></div></div>
+          <div class="ci"><div class="ci-ic">🕐</div><div><div class="ci-lbl">Hours</div><div class="ci-val">24/7</div></div></div>
+          <a href="https://wa.me/2349034873552" target="_blank" class="btn btn-wa" style="margin-top:8px">
+            <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+        <div class="fcard">
+          <div class="fcard-t">Send a message</div>
+          <div class="fcard-s">We will reply within minutes via WhatsApp.</div>
+          <div class="fr">
+            <div class="fg"><label class="fl">Full name</label><input class="fi" type="text" id="cn" placeholder="Your name"></div>
+            <div class="fg"><label class="fl">WhatsApp</label><input class="fi" type="tel" id="cp" placeholder="+234..."></div>
+          </div>
+          <div class="fg"><label class="fl">Subject</label><input class="fi" type="text" id="cs" placeholder="What is this about?"></div>
+          <div class="fg"><label class="fl">Message</label><textarea class="fta" id="cm" placeholder="How can we help you?"></textarea></div>
+          <button class="btn btn-red" style="width:100%;justify-content:center" onclick="sendContact()">
+            <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Send via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLOG ── -->
+  <section class="sec sec-alt" id="blog">
+    <div class="wrap">
+      <div class="rule"></div><div class="tag">Blog</div>
+      <h2 class="ttl">Smart <span>insights</span></h2>
+      <p class="sub">Tips, trends and tech news from the Smartly team.</p>
+      <div class="blog-g">
+        <div class="bcard fu"><div class="bimg" style="background:linear-gradient(135deg,#1a0a2e,#0a0518)">🤖</div><div class="bbody"><div class="bmeta">Dec 2024 · AI & Tech</div><div class="btit">5 Ways AI is Transforming Shopping in 2025</div><div class="bex">From personalised recommendations to same-day delivery — how smart tech is changing retail.</div></div></div>
+        <div class="bcard fu"><div class="bimg" style="background:linear-gradient(135deg,#1a2a0a,#0d1a00)">🔋</div><div class="bbody"><div class="bmeta">Nov 2024 · Energy</div><div class="btit">Solar Power in Nigeria: What to Know Before Buying</div><div class="bex">A practical guide to choosing the right solar inverter and panel system for your home.</div></div></div>
+        <div class="bcard fu"><div class="bimg" style="background:linear-gradient(135deg,#1a1a0a,#121200)">💰</div><div class="bbody"><div class="bmeta">Oct 2024 · Finance</div><div class="btit">Smart Money Habits That Can Change Your Future</div><div class="bex">Simple but powerful strategies to grow wealth, reduce waste and invest with confidence.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ftr">
+    <div class="ftr-in">
+      <div>
+        <div class="logo" style="cursor:default"><div class="logo-box">S</div><span class="logo-txt">Smartly</span></div>
+        <p class="ftr-tag">The Future of Smart Shopping.<br>Quality. Innovation. Excellence.</p>
+        <div class="soc">
+          <a href="https://wa.me/2349034873552" target="_blank" class="soc-l"><svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div class="ftr-col"><div class="ftr-h">Products</div><span class="ftr-l" onclick="goSec('smart-kids')">Smart Kids</span><span class="ftr-l" onclick="goSec('smart-sports')">Smart Sports</span><span class="ftr-l" onclick="goSec('smart-kitchen')">Smart Kitchen</span><span class="ftr-l" onclick="goSec('smart-energy')">Smart Energy</span><span class="ftr-l" onclick="goSec('smart-fashion')">Smart Fashion</span><span class="ftr-l" onclick="goSec('smart-money')">Smart Money</span></div>
+      <div class="ftr-col"><div class="ftr-h">Services</div><span class="ftr-l" onclick="showPage('flight')">Flight Services</span><span class="ftr-l" onclick="showPage('ai')">Soft/AI Solutions</span><span class="ftr-l" onclick="showPage('shopper')">Smart Shopper</span></div>
+      <div class="ftr-col"><div class="ftr-h">Company</div><span class="ftr-l" onclick="goSec('about')">About Us</span><span class="ftr-l" onclick="goSec('contact')">Contact Us</span><span class="ftr-l" onclick="goSec('blog')">Blog</span></div>
+    </div>
+    <div class="ftr-bot">&copy; 2025 Smartly. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FLIGHT SERVICES PAGE  (URL: shop.com/flightservices)
+══════════════════════════════════════════════════════════ -->
+<div class="page" id="page-flight">
+  <div class="spage-hero">
+    <!-- SERVICE HERO IMAGE: add your image here -->
+      <img src="https://images.unsplash.com/photo-1598448056086-307e98ef5c4a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGx1eHVyaW91cyUyMGZ1cm5pc2hlZCUyMGV4ZWN1dGl2ZSUyMHByaXZhdGUlMjBqZXR8ZW58MHx8MHx8fDA%3D" alt="Flight Services">
+    <div class="spage-hero-bg">
+       <!-- <img src="your-jet-hero.jpg" alt="Flight Services"> -->
+      <!--<img src="https://images.unsplash.com/photo-1598448056086-307e98ef5c4a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGx1eHVyaW91cyUyMGZ1cm5pc2hlZCUyMGV4ZWN1dGl2ZSUyMHByaXZhdGUlMjBqZXR8ZW58MHx8MHx8fDA%3D" alt="Flight Services">-->
+    </div>
+    <div class="wrap" style="width:100%">
+      <div class="spage-hero-c">
+        <div class="hero-ic">✈️</div>
+        <div class="tag">Flight Services</div>
+        <h1 class="hero-ttl">Fly <span style="color:var(--red3)">anywhere</span>,<br>effortlessly.</h1>
+        <p class="hero-sub">Premium jet charter for local and international routes — we handle everything for you.</p>
+        <br><p class="hero-sub">Refere and get 30% commission.</p></br>
+      </div>
+    </div>
+  </div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="feats">
+        <div class="feat"><div class="feat-ic">🌍</div><div class="feat-n">Global routes</div><div class="feat-d">Hundreds of local and international destinations covered.</div></div>
+        <!--<div class="feat"><div class="feat-ic">💺</div><div class="feat-n">All classes</div><div class="feat-d">Economy, business and first class for every budget.</div></div>-->
+        <div class="feat"><div class="feat-ic">⚡</div><div class="feat-n">Fast reservations</div><div class="feat-d">Submit your request and get full charter details within minutes.</div></div>
+        <div class="feat"><div class="feat-ic">🔒</div><div class="feat-n">Fully trusted</div><div class="feat-d">Verified agents with end-to-end support and follow-up.</div></div>
+      </div>
+
+       <!-- FLIGHT BOOKING FORM — Private Jet Charter -->
+
+       <div class="fcard">
+        <div class="fcard-t">Request a Private Jet Charter</div>
+        <div class="fcard-s">Submit your request and get details within minutes.</div>
+
+        <div style="border-top:1px solid var(--border);padding-top:20px;margin-bottom:20px">
+          <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);margin-bottom:16px">Flight Details</p>
+          <div class="fr">
+            <div class="fg"><label class="fl">Departure *</label><input class="fi" id="f-from" placeholder="City or airport"></div>
+            <div class="fg"><label class="fl">Destination *</label><input class="fi" id="f-to" placeholder="City or airport"></div>
+          </div>
+          <div class="fr">
+            <div class="fg"><label class="fl">Date *</label><input class="fi" id="f-date" type="date"></div>
+            <div class="fg"><label class="fl">Time *</label><input class="fi" id="f-time" type="time"></div>
+          </div>
+          <div class="fr">
+            <div class="fg"><label class="fl">Passengers *</label><input class="fi" id="f-pax" type="number" min="1" max="50" placeholder="Number of passengers"></div>
+            <div class="fg"><label class="fl">Type of Aircraft *</label>
+              <select class="fs" id="f-aircraft">
+                <option value="">Select aircraft type</option>
+                <option>Very Light Jet (1–4 passengers)</option>
+                <option>Light Jet (5–7 passengers)</option>
+                <option>Midsize Jet (7–9 passengers)</option>
+                <option>Super Midsize Jet (8–10 passengers)</option>
+                <option>Heavy Jet (10–16 passengers)</option>
+                <option>Ultra Long Range Jet (12–19 passengers)</option>
+                <option>Not sure — advise me</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid var(--border);padding-top:20px;margin-bottom:20px">
+          <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);margin-bottom:16px">Special Requests</p>
+          <div class="fg"><textarea class="fta" id="f-special" placeholder="Catering preferences, ground transport, onboard requirements, accessibility needs, etc."></textarea></div>
+        </div>
+
+        <div style="border-top:1px solid var(--border);padding-top:20px;margin-bottom:20px">
+          <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);margin-bottom:16px">Contact Details</p>
+          <div class="fg"><label class="fl">Name *</label><input class="fi" id="f-name" placeholder="Your full name"></div>
+          <div class="fg"><label class="fl">Phone / WhatsApp *</label><input class="fi" id="f-phone" type="tel" placeholder="+234..."></div>
+          <div class="fg"><label class="fl">Email *</label><input class="fi" id="f-email" type="email" placeholder="your@email.com"></div>
+        </div>
+
+        <div style="border-top:1px solid var(--border);padding-top:20px;margin-bottom:24px">
+          <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);margin-bottom:16px">How soon do you need this flight?</p>
+          <div class="fg">
+            <select class="fs" id="f-urgency">
+              <option value="">Select urgency</option>
+              <option>Within 2–4 hours</option>
+              <option>Same day</option>
+              <option>Within 24 hours</option>
+              <option>Flexible</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn btn-red" style="width:100%;justify-content:center;padding:16px;font-size:16px" onclick="sendFlight()">
+          <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Request Private Jet Quote via WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+  <footer class="ftr"><div class="ftr-bot">&copy; 2025 Smartly. All rights reserved.</div></footer>
+</div>
+
+
+      <!--<div class="fcard">
+        <div class="fcard-t">Book your flight</div>
+        <div class="fcard-s">Fill the form — your details go directly to our WhatsApp for instant processing.</div>
+        <div class="fr">
+          <div class="fg"><label class="fl">Full name *</label><input class="fi" id="f-name" placeholder="Your full name"></div>
+          <div class="fg"><label class="fl">Email *</label><input class="fi" id="f-email" type="email" placeholder="you@email.com"></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label class="fl">WhatsApp *</label><input class="fi" id="f-phone" type="tel" placeholder="+234..."></div>
+          <div class="fg"><label class="fl">Passengers *</label><input class="fi" id="f-pax" type="number" min="1" max="20" placeholder="1"></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label class="fl">Flying from *</label><input class="fi" id="f-from" placeholder="City or airport"></div>
+          <div class="fg"><label class="fl">Flying to *</label><input class="fi" id="f-to" placeholder="City or airport"></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label class="fl">Departure date *</label><input class="fi" id="f-date" type="date"></div>
+          <div class="fg"><label class="fl">Return date (optional)</label><input class="fi" id="f-ret" type="date"></div>
+        </div>
+        <div class="fg"><label class="fl">Travel class *</label>
+          <select class="fs" id="f-class">
+            <option value="">Select class</option>
+            <option>Economy</option><option>Business</option><option>First Class</option>
+          </select>
+        </div>
+        <div class="fg"><label class="fl">Special requests</label><textarea class="fta" id="f-note" placeholder="Seat preference, meal, etc."></textarea></div>
+        <button class="btn btn-red" style="width:100%;justify-content:center;padding:14px;font-size:15px" onclick="sendFlight()">
+          <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Submit Booking via WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+  <footer class="ftr"><div class="ftr-bot">&copy; 2025 Smartly. All rights reserved.</div></footer>
+</div>-->
+
+
+<!-- ══════════════════════════════════════════════════════════
+     AI SOLUTIONS PAGE  (URL: shop.com/soft)
+══════════════════════════════════════════════════════════ -->
+<div class="page" id="page-ai">
+  <div class="spage-hero">
+    <div class="spage-hero">
+      <!-- SERVICE HERO IMAGE: <img src="your-ai-hero.jpg" alt="AI Solutions"> -->
+       <img src="https://plus.unsplash.com/premium_photo-1721225465014-cba692ada75c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    </div>
+    <div class="wrap" style="width:100%">
+      <div class="spage-hero-c">
+        <div class="hero-ic">🤖</div>
+        <div class="tag">Soft/AI Solutions</div>
+        <h1 class="hero-ttl">Build smarter <span style="color:var(--red3)">software</span><br>powered by AI.</h1>
+        <p class="hero-sub">Custom web apps, mobile solutions, AI integrations and automation systems — built by experts to solve real problems.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+       <!-- Technical Partners badge — QO BOX -->
+      <div class="partner-badge">
+        <div>
+          <div class="partner-label">Technical Partners</div>
+          <div class="partner-name">QO BOX</div>
+        </div>
+        <div style="width:1px;height:36px;background:var(--border);margin:0 4px"></div>
+        <div style="font-size:12px;color:var(--text2);max-width:260px;line-height:1.5">Powering our AI and software infrastructure with cutting-edge technology solutions.</div>
+      </div>
+
+      <div class="feats">
+        <div class="feat"><div class="feat-ic">🌐</div><div class="feat-n">Web development</div><div class="feat-d">Full-stack websites and apps built for speed and scale.</div></div>
+        <div class="feat"><div class="feat-ic">📱</div><div class="feat-n">Mobile apps</div><div class="feat-d">iOS and Android apps your users will love and return to.</div></div>
+        <div class="feat"><div class="feat-ic">🧠</div><div class="feat-n">AI integration</div><div class="feat-d">Chatbots, recommendations and smart automation systems.</div></div>
+        <div class="feat"><div class="feat-ic">⚙️</div><div class="feat-n">Automation</div><div class="feat-d">Eliminate repetitive tasks and streamline your workflows.</div></div>
+      </div>
+      <div class="fcard">
+        <div class="fcard-t">Request a solution</div>
+        <div class="fcard-s">Tell us about your project — we will send a proposal via WhatsApp.</div>
+        <div class="fr">
+          <div class="fg"><label class="fl">Full name *</label><input class="fi" id="a-name" placeholder="Your name"></div>
+          <div class="fg"><label class="fl">Email *</label><input class="fi" id="a-email" type="email" placeholder="you@email.com"></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label class="fl">WhatsApp *</label><input class="fi" id="a-phone" type="tel" placeholder="+234..."></div>
+          <div class="fg"><label class="fl">Company</label><input class="fi" id="a-co" placeholder="Optional"></div>
+        </div>
+        <div class="fg"><label class="fl">Service needed *</label>
+          <select class="fs" id="a-svc">
+            <option value="">Select a service</option>
+            <option>Web Development</option><option>Mobile App Development</option>
+            <option>AI Integration / Chatbot</option><option>Business Automation</option>
+            <option>UI/UX Design</option><option>Other / Not sure yet</option>
+          </select>
+        </div>
+        <div class="fr">
+          <div class="fg"><label class="fl">Budget range *</label>
+            <select class="fs" id="a-budget">
+              <option value="">Select budget</option>
+              <option>Under ₦200,000</option><option>₦200k – ₦500k</option>
+              <option>₦500k – ₦1M</option><option>Above ₦1M</option>
+            </select>
+          </div>
+          <div class="fg"><label class="fl">Timeline *</label>
+            <select class="fs" id="a-time">
+              <option value="">Select timeline</option>
+              <option>ASAP (under 2 weeks)</option><option>1 month</option>
+              <option>1–3 months</option><option>Flexible</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg"><label class="fl">Project description *</label><textarea class="fta" id="a-desc" style="min-height:130px" placeholder="Describe what you want to build, the problem it solves, and any specific features…"></textarea></div>
+        <button class="btn btn-red" style="width:100%;justify-content:center;padding:14px;font-size:15px" onclick="sendAI()">
+          <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Send Request via WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+  <footer class="ftr"><div class="ftr-bot">&copy; 2025 Smartly. All rights reserved.</div></footer>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SMART SHOPPER PAGE  (URL: shop.com/smartshopper)
+══════════════════════════════════════════════════════════ -->
+<div class="page" id="page-shopper">
+  <div class="spage-hero">
+    <div class="spage-hero-bg">
+      <!-- SERVICE HERO IMAGE: <img src="your-shopper-hero.jpg" alt="Smart Shopper"> -->
+       <img src="https://images.unsplash.com/photo-1553531889-56cc480ac5cb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Smart Shopper">
+    </div>
+    <div class="wrap" style="width:100%">
+      <div class="spage-hero-c">
+        <div class="hero-ic">🛍️</div>
+        <div class="tag">Smart Shopper</div>
+        <h1 class="hero-ttl">Your personal <span style="color:var(--red3)">shopping</span><br>assistant.</h1>
+        <p class="hero-sub">Tell us what you want — our team sources it, compares prices and delivers the best deal straight to you.</p>
+      </div>
+    </div>
+  </div>
+  <section class="sec">
+    <div class="wrap">
+      <!-- WE CAN DO MUCH MORE card -->
+      <div class="more-card">
+        <div class="more-card-title"><h1>We can do much more for you:</h1></div>
+        <div class="more-list">
+          <div class="more-item"><div class="more-dot"></div><span><h2>- Help you shop and buy groceries from the best markets and malls</h2></span></div>
+          <div class="more-item"><div class="more-dot"></div><span><h2>- Help you run errands within the city — fast and reliably</h2></span></div>
+          <div class="more-item"><div class="more-dot"></div><span><h2>- Be your one-day personal assistant for whatever the day demands</h2></span></div>
+          <div class="more-item"><div class="more-dot"></div><span><h2>- Pay a visit or represent you at meetings and events</h2></span></div>
+        </div>
+      </div>
+
+      <div class="feats">
+        <div class="feat"><div class="feat-ic">🔍</div><div class="feat-n">We source for you</div><div class="feat-d">Our team searches multiple suppliers to find exactly what you need.</div></div>
+        <div class="feat"><div class="feat-ic">💰</div><div class="feat-n">Best price guaranteed</div><div class="feat-d">We compare vendors and always get you the smartest deal.</div></div>
+        <div class="feat"><div class="feat-ic">🚚</div><div class="feat-n">Fast delivery</div><div class="feat-d">Doorstep delivery across Lagos and major Nigerian cities.</div></div>
+        <div class="feat"><div class="feat-ic">🛡️</div><div class="feat-n">Quality assured</div><div class="feat-d">Every product inspected before delivery. Satisfaction guaranteed.</div></div>
+      </div>
+
+
+      <div class="fcard">
+        <div class="fcard-t">What are you looking for?</div>
+        <div class="fcard-s">Give us the details — we will reply via WhatsApp with options and pricing within 24 hours.</div>
+        <div class="fr">
+          <div class="fg"><label class="fl">Full name *</label><input class="fi" id="s-name" placeholder="Your name"></div>
+          <div class="fg"><label class="fl">Email *</label><input class="fi" id="s-email" type="email" placeholder="you@email.com"></div>
+        </div>
+        <div class="fg"><label class="fl">WhatsApp *</label><input class="fi" id="s-phone" type="tel" placeholder="+234..."></div>
+        <div class="fr">
+          <div class="fg"><label class="fl">Category *</label>
+            <select class="fs" id="s-cat">
+              <option value="">Select category</option>
+              <option>Smart Kids</option><option>Smart Sports</option>
+              <option>Smart Kitchen & Home</option><option>Smart Energy & Electric</option>
+              <option>Smart Fashion</option><option>Smart Money</option><option>Other / Custom item</option>
+            </select>
+          </div>
+          <div class="fg"><label class="fl">Your budget *</label>
+            <select class="fs" id="s-budget">
+              <option value="">Select range</option>
+              <option>Under ₦20,000</option><option>₦20k – ₦50k</option>
+              <option>₦50k – ₦150k</option><option>₦150k – ₦500k</option><option>Above ₦500k</option>
+            </select>
+          </div>
+          <div class="fg"><label class="fl">Sex *</label>
+            <select class="fs" id="Sex">
+              <option value="">Select Sex</option>
+              <option>Female</option><option>Male</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="fr">
+          <div class="fg"><label class="fl">Market preference</label>
+            <select class="fs" id="s-market">
+              <option value="">Select preference</option>
+              <option>Shopping Mall</option>
+              <option>Open Market</option>
+              <option>No preference — get best deal</option>
+            </select>
+          </div>
+
+        <div class="fg"><label class="fl">Delivery preference *</label>
+          <select class="fs" id="s-del">
+            <option value="">Select</option>
+            <option>Home delivery – Abuja</option>
+            <option>Home delivery – Lagos</option>
+            <option>Home delivery – Other state</option>
+          </select>
+        </div>
+        </div>
+
+        <div class="fg"><label class="fl">Describe what you want *</label><textarea class="fta" id="s-pref" style="min-height:130px" placeholder="Brand, size, colour, quantity, specifications — the more detail the better…"></textarea></div>
+        <button class="btn btn-red" style="width:100%;justify-content:center;padding:14px;font-size:15px" onclick="sendShopper()">
+          <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Send Shopping Request via WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+  <footer class="ftr"><div class="ftr-bot">&copy; 2025 Smartly. All rights reserved.</div></footer>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SEARCH RESULTS PAGE
+══════════════════════════════════════════════════════════ -->
+<div class="page" id="page-search">
+  <div class="srch-pg">
+    <div class="wrap">
+      <div class="rule"></div>
+      <h2 class="ttl" id="srch-ttl">Search <span>results</span></h2>
+      <p style="color:var(--text2);margin-bottom:40px" id="srch-count"></p>
+      <div class="prod-grid" id="srch-results"></div>
+      <div style="margin-top:52px;text-align:center">
+        <button class="btn btn-out" onclick="showPage('home')">← Back to Home</button>
+      </div>
+    </div>
+  </div>
+  <footer class="ftr"><div class="ftr-bot">&copy; 2025 Smartly. All rights reserved.</div></footer>
+</div>
+
+
+<script>
+// ── CONFIG ──────────────────────────────────────────────────────────────────
+const WA = '2349034873552'; // ← Replace with your actual WhatsApp number
+
+// ── PAGE SYSTEM ─────────────────────────────────────────────────────────────
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+  // close mobile nav
+  document.getElementById('nav').classList.remove('open');
+  // re-trigger observers
+  setTimeout(observeCards, 100);
+}
+
+function goSec(id) {
+  showPage('home');
+  setTimeout(() => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }, 80);
+}
+
+// ── SLIDESHOW ───────────────────────────────────────────────────────────────
+const strack = document.getElementById('strack');
+const total = strack.querySelectorAll('.slide').length;
+let cur = 0, timer;
+
+(function initSlide() {
+  const dotsEl = document.getElementById('sdots');
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement('div');
+    d.className = 'sdot' + (i === 0 ? ' on' : '');
+    d.onclick = () => { clearInterval(timer); goSlide(i); startAuto(); };
+    dotsEl.appendChild(d);
+  }
+  startAuto();
+})();
+
+function goSlide(n) {
+  cur = (n + total) % total;
+  document.getElementById('strack').style.transform = 'translateX(-' + cur * 100 + '%)';
+  document.querySelectorAll('.sdot').forEach((d, i) => d.classList.toggle('on', i === cur));
+}
+function slideMove(dir) { clearInterval(timer); goSlide(cur + dir); startAuto(); }
+function startAuto() { timer = setInterval(() => goSlide(cur + 1), 4800); }
+
+// Touch swipe
+let tx = 0;
+const st = document.getElementById('strack');
+st.addEventListener('touchstart', e => tx = e.touches[0].clientX, {passive: true});
+st.addEventListener('touchend', e => {
+  const d = tx - e.changedTouches[0].clientX;
+  if (Math.abs(d) > 45) { clearInterval(timer); goSlide(cur + (d > 0 ? 1 : -1)); startAuto(); }
+});
+
+// ── NAV ─────────────────────────────────────────────────────────────────────
+function toggleNav() {
+  document.getElementById('nav').classList.toggle('open');
+}
+document.querySelectorAll('.ndrop .nl').forEach(n => {
+  n.addEventListener('click', e => {
+    if (window.innerWidth <= 768) {
+      e.stopPropagation();
+      n.closest('.ndrop').classList.toggle('open');
+    }
+  });
+});
+
+// Sticky shadow
+window.addEventListener('scroll', () => {
+  document.getElementById('hdr').style.boxShadow = window.scrollY > 10 ? '0 2px 30px rgba(0,0,0,.7)' : 'none';
+}, {passive: true});
+
+// ── SEARCH ────────────────────────────────────────────────────────────────── 
+
+const allProducts = [
+  {name:'Smart Learning Tablet',price:'₦45,000',cat:'Smart Kids',emoji:'📱',desc:'Interactive AI-powered learning device for ages 3–12.'},
+  {name:'Coding Robot Kit',price:'₦38,000',cat:'Smart Kids',emoji:'🤖',desc:'Teach kids coding through play and adventure.'},
+  {name:'Smart Story Speaker',price:'₦22,000',cat:'Smart Kids',emoji:'🔊',desc:'AI storyteller adapting to your child\'s imagination.'},
+  {name:'AI Fitness Tracker',price:'₦55,000',cat:'Smart Sports',emoji:'⌚',desc:'Real-time vitals, calories and performance analytics.'},
+  {name:'Smart Jump Rope',price:'₦18,000',cat:'Smart Sports',emoji:'🏃',desc:'Digital counter, calorie tracker and coaching app.'},
+  {name:'Smart Football',price:'₦32,000',cat:'Smart Sports',emoji:'⚽',desc:'Sensor-embedded ball tracking speed and spin.'},
+  {name:'AI Air Fryer Pro',price:'₦98,000',cat:'Smart Kitchen',emoji:'🍳',desc:'12-in-1 smart air fryer with app control.'},
+  {name:'Smart Blender',price:'₦42,000',cat:'Smart Kitchen',emoji:'🧃',desc:'Self-cleaning blender with recipe suggestions.'},
+  {name:'Smart Water Purifier',price:'₦65,000',cat:'Smart Kitchen',emoji:'💧',desc:'6-stage filtration with quality monitoring display.'},
+  {name:'Solar Inverter 5KVA',price:'₦320,000',cat:'Smart Energy',emoji:'☀️',desc:'Hybrid solar inverter with WiFi monitoring.'},
+  {name:'Smart Electric Motor',price:'₦180,000',cat:'Smart Energy',emoji:'⚙️',desc:'Variable speed drive motor with IoT integration.'},
+  {name:'Solar Panel 400W',price:'₦95,000',cat:'Smart Energy',emoji:'🌞',desc:'High-efficiency monocrystalline panel.'},
+  {name:'Smart Watch Elite',price:'₦75,000',cat:'Smart Fashion',emoji:'⌚',desc:'Premium AMOLED smartwatch with health sensors.'},
+  {name:'LED Smart Sneakers',price:'₦48,000',cat:'Smart Fashion',emoji:'👟',desc:'App-controlled color-changing LED sneakers.'},
+  {name:'Smart Sunglasses',price:'₦35,000',cat:'Smart Fashion',emoji:'🕶️',desc:'Built-in speakers, UV protection and smart controls.'},
+  {name:'Investment Starter Kit',price:'₦15,000',cat:'Smart Money',emoji:'📈',desc:'Complete toolkit for smart investing.'},
+  {name:'Business Plan Bundle',price:'₦25,000',cat:'Smart Money',emoji:'💼',desc:'AI-generated business plans and financial models.'},
+  {name:'Crypto Tracker Pro',price:'₦12,000',cat:'Smart Money',emoji:'₿',desc:'Real-time portfolio tracker with price alerts.'},
+  {name:'Electric car',price:'₦12,0000',cat:'Smart Energy',emoji:'₿',desc:'Real-time portfolio tracker with price alerts.'},
+];
+const allServices = [
+  {name:'Flight Services',emoji:'✈️',desc:'Book local and international flights with ease.',page:'flight'},
+  {name:'Soft/AI Solutions',emoji:'🤖',desc:'Custom software and AI development services.',page:'ai'},
+  {name:'Smart Shopper',emoji:'🛍️',desc:'Personal shopping assistant service.',page:'shopper'},
+];
+
+function doSearch(e) {
+  e.preventDefault();
+  const q = document.getElementById('srchInput').value.toLowerCase().trim();
+  if (!q) return;
+  const res = [];
+  allProducts.forEach(p => {
+    if (p.name.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q)) res.push({...p, type:'product'});
+  });
+  allServices.forEach(s => {
+    if (s.name.toLowerCase().includes(q) || s.desc.toLowerCase().includes(q)) res.push({...s, type:'service'});
+  });
+  document.getElementById('srch-ttl').innerHTML = 'Results for <span>"' + q + '"</span>';
+  document.getElementById('srch-count').textContent = res.length ? res.length + ' result' + (res.length > 1 ? 's' : '') + ' found' : 'No results found — try a different keyword.';
+  const grid = document.getElementById('srch-results');
+  grid.innerHTML = res.map(r => r.type === 'product' ?
+    `<a class="pcard" href="javascript:void(0)" onclick="waProduct('${r.name}','${r.price}')">
+      <div class="pimg"><div class="pimg-inner" style="background:var(--bg4)">${r.emoji}</div><span class="pbadge">${r.cat}</span></div>
+      <div class="pinfo"><div class="pname">${r.name}</div><div class="pdesc">${r.desc}</div>
+      <div class="pfoot"><span class="pprice">${r.price}</span><span class="pwa">Order</span></div></div></a>` :
+    `<div class="pcard" onclick="showPage('${r.page}')">
+      <div class="pimg"><div class="pimg-inner" style="background:var(--bg4)">${r.emoji}</div><span class="pbadge">Service</span></div>
+      <div class="pinfo"><div class="pname">${r.name}</div><div class="pdesc">${r.desc}</div>
+      <div class="pfoot"><span style="color:var(--cyan);font-size:13px;font-weight:600">View Service →</span></div></div></div>`
+  ).join('');
+  showPage('search');
+}
+
+// ── WHATSAPP SENDERS ────────────────────────────────────────────────────────
+function waLink(text) {
+  window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(text), '_blank');
+}
+function waProduct(name, price) {
+  waLink('Hi Smartly! 👋\n\nI am interested in purchasing:\n\n🛒 *' + name + '*\nPrice: ' + price + '\n\nPlease provide more details and availability.');
+}
+function sendContact() {
+  const n = document.getElementById('cn').value;
+  const p = document.getElementById('cp').value;
+  const s = document.getElementById('cs').value;
+  const m = document.getElementById('cm').value;
+  if (!n || !p) { alert('Please fill in your name and phone number.'); return; }
+  waLink('📩 CONTACT MESSAGE\n\nName: ' + n + '\nPhone: ' + p + '\nSubject: ' + s + '\n\nMessage:\n' + m);
+}
+function sendFlight() {
+  const n = document.getElementById('f-name').value;
+  const ph = document.getElementById('f-phone').value;
+  const fr = document.getElementById('f-from').value;
+  const to = document.getElementById('f-to').value;
+  if (!n || !ph || !fr || !to) { alert('Please fill in all required fields.'); return; }
+  waLink('✈️ FLIGHT BOOKING REQUEST\n\nName: ' + n + '\nEmail: ' + document.getElementById('f-email').value + '\nPhone: ' + ph + '\n\nFrom: ' + fr + ' → To: ' + to + '\nDate: ' + document.getElementById('f-date').value + '\nReturn: ' + (document.getElementById('f-ret').value || 'One way') + '\nPassengers: ' + document.getElementById('f-pax').value + '\nClass: ' + document.getElementById('f-class').value + '\n\nRequests: ' + (document.getElementById('f-note').value || 'None'));
+}
+function sendAI() {
+  const n = document.getElementById('a-name').value;
+  const ph = document.getElementById('a-phone').value;
+  const d = document.getElementById('a-desc').value;
+  if (!n || !ph || !d) { alert('Please fill in all required fields.'); return; }
+  waLink('🤖 AI SOLUTIONS REQUEST\n\nName: ' + n + '\nEmail: ' + document.getElementById('a-email').value + '\nPhone: ' + ph + '\nCompany: ' + (document.getElementById('a-co').value || 'N/A') + '\n\nService: ' + document.getElementById('a-svc').value + '\nBudget: ' + document.getElementById('a-budget').value + '\nTimeline: ' + document.getElementById('a-time').value + '\n\nDescription:\n' + d);
+}
+function sendShopper() {
+  const n = document.getElementById('s-name').value;
+  const ph = document.getElementById('s-phone').value;
+  const pref = document.getElementById('s-pref').value;
+  if (!n || !ph || !pref) { alert('Please fill in all required fields.'); return; }
+  waLink('🛍️ SMART SHOPPER REQUEST\n\nName: ' + n + '\nEmail: ' + document.getElementById('s-email').value + '\nPhone: ' + ph + '\n\nCategory: ' + document.getElementById('s-cat').value + '\nBudget: ' + document.getElementById('s-budget').value + '\nDelivery: ' + document.getElementById('s-del').value + '\n\nItem Details:\n' + pref);
+}
+
+// ── SCROLL ANIMATIONS ───────────────────────────────────────────────────────
+function observeCards() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); }});
+  }, {threshold: 0.08});
+  document.querySelectorAll('.fu:not(.vis)').forEach(el => obs.observe(el));
+}
+observeCards();
+</script>
+</body>
+</html>
